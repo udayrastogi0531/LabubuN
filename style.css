@@ -1,0 +1,63 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.character {
+  --bg-col: #fff;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-col);
+  border: 12px solid var(--bg-col);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.character.active {
+  opacity: 1;
+}
+
+.slide-bunny {
+  width: 280px;
+  height: auto;
+  display: block;
+  background: transparent;
+  border: none;
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Background color for each character */
+.bg1 { --bg-col: #eaf1ec; }
+.bg2 { --bg-col: #9f6d3b; }
+.bg3 { --bg-col: #e1c3d6; }
+.bg4 { --bg-col: #f5e1d0; }
+.bg5 { --bg-col: #f2d9cc; }
+.bg6 { --bg-col: #c6b8ae; }
